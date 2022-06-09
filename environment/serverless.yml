@@ -1,0 +1,18 @@
+org: naner
+app: environment
+service: environment
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+  environment:
+    env1: i am environment
+
+functions:
+  env:
+    handler: handler.environment
+    environment: 
+      env2: i am environment two
